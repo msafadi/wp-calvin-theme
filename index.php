@@ -14,14 +14,14 @@ $slider_loop = new WP_Query([
     ?>
     <!-- hero
     ================================================== -->
-    <section id="hero" class="s-hero">
+    <section id="hero" class="s-hero" dir="ltr">
 
         <div class="s-hero__slider">
             <?php
             while ($slider_loop->have_posts()) :
                 $slider_loop->the_post();
             ?>
-            <div class="s-hero__slide">
+            <div class="s-hero__slide" dir="<?= is_rtl()? 'rtl' : 'ltr' ?>">
 
                 <div class="s-hero__slide-bg" style="background-image: url('<?php header_image() ?>');"></div>
 
@@ -55,12 +55,14 @@ $slider_loop = new WP_Query([
         <div class="s-hero__social hide-on-mobile-small">
             <p>Follow</p>
             <span></span>
-            <ul class="s-hero__social-icons">
-                <li><a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                <li><a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                <li><a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a></li>
-            </ul>
+            <?php
+                wp_nav_menu([
+                    'theme_location' => 'social-menu',
+                    'container' => '',
+                    'menu_class' => 's-hero__social-icons',
+                    'depth' => 1
+                ]);
+            ?>
         </div> <!-- end s-hero__social -->
 
         <div class="nav-arrows s-hero__nav-arrows">

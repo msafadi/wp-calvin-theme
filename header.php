@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="<?php echo get_locale() ?>" dir="<?= is_rtl()? 'rtl' : 'ltr' ?>">
 <head>
 
     <!--- basic page needs
@@ -13,16 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <?php wp_head() ?>
-
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="<?= get_theme_file_uri('assets/css/vendor.css') ?>">
-    <link rel="stylesheet" href="<?= get_theme_file_uri('assets/css/styles.css') ?>">
-
-    <!-- script
-    ================================================== -->
-    <script src="<?= get_theme_file_uri('assets/js/modernizr.js') ?>"></script>
-    <script defer src="<?= get_theme_file_uri('assets/js/fontawesome/all.min.js') ?>"></script>
 
     <!-- favicons
     ================================================== -->

@@ -8,48 +8,50 @@
 
                 <div class="column large-3 medium-6 tab-12 s-footer__info">
 
-                    <h5>About Our Site</h5>
+                    <?php
+                        if (is_active_sidebar('calvin-footer-1')) :
+                            dynamic_sidebar('calvin-footer-1');
+                        else :
+                    ?>
+                    <div class="widget">
+                        <h5>About Our Site</h5>
+                        <p>
+                        Lorem ipsum Ut velit dolor Ut labore id fugiat in ut 
+                        fugiat nostrud qui in dolore commodo eu magna Duis 
+                        cillum dolor officia esse mollit proident Excepteur 
+                        exercitation nulla. Lorem ipsum In reprehenderit 
+                        commodo aliqua irure.
+                        </p>
+                    </div>
+                    <?php
+                        endif;
+                    ?>
 
-                    <p>
-                    Lorem ipsum Ut velit dolor Ut labore id fugiat in ut 
-                    fugiat nostrud qui in dolore commodo eu magna Duis 
-                    cillum dolor officia esse mollit proident Excepteur 
-                    exercitation nulla. Lorem ipsum In reprehenderit 
-                    commodo aliqua irure.
-                    </p>
 
                 </div> <!-- end s-footer__info -->
 
                 <div class="column large-2 medium-3 tab-6 s-footer__site-links">
-
-                    <h5>Site Links</h5>
-
-                    <ul>
-                        <li><a href="#0">About Us</a></li>
-                        <li><a href="#0">Blog</a></li>
-                        <li><a href="#0">FAQ</a></li>
-                        <li><a href="#0">Terms</a></li>
-                        <li><a href="#0">Privacy Policy</a></li>
-                    </ul>
-
+                    <?php
+                    if (is_active_sidebar('calvin-footer-2')) :
+                        dynamic_sidebar('calvin-footer-2');
+                    endif
+                    ?>
                 </div> <!-- end s-footer__site-links -->  
 
                 <div class="column large-2 medium-3 tab-6 s-footer__social-links">
-
-                    <h5>Follow Us</h5>
-
-                    <ul>
-                        <li><a href="#0">Twitter</a></li>
-                        <li><a href="#0">Facebook</a></li>
-                        <li><a href="#0">Dribbble</a></li>
-                        <li><a href="#0">Pinterest</a></li>
-                        <li><a href="#0">Instagram</a></li>
-                    </ul>
-
+                    <?php
+                    if (is_active_sidebar('calvin-footer-3')) :
+                        dynamic_sidebar('calvin-footer-3');
+                    endif
+                    ?>
                 </div> <!-- end s-footer__social links --> 
 
                 <div class="column large-3 medium-6 tab-12 s-footer__subscribe">
-
+                <?php
+                    if (is_active_sidebar('calvin-footer-4')) :
+                        dynamic_sidebar('calvin-footer-4');
+                    else :
+                    ?>
                     <h5>Sign Up for Newsletter</h5>
 
                     <p>Signup to get updates on articles, interviews and events.</p>
@@ -67,7 +69,9 @@
                         </form>
 
                     </div>
-
+                    <?php
+                        endif;
+                    ?>
                 </div> <!-- end s-footer__subscribe -->
 
             </div> <!-- end row -->
@@ -93,14 +97,8 @@
 
    </footer> <!-- end s-footer -->
 
-
    <?php wp_footer() ?>
    
-    <!-- Java Script
-    ================================================== -->
-    <script src="<?= get_theme_file_uri('assets/js/jquery-3.5.0.min.js') ?>"></script>
-    <script src="<?= get_theme_file_uri('assets/js/plugins.js') ?>"></script>
-    <script src="<?= get_theme_file_uri('assets/js/main.js') ?>"></script>
 </body>
 
 </html>
