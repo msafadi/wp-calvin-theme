@@ -169,3 +169,11 @@ function calvin_register_sidebars() {
     ]);
 }
 add_action('widgets_init', 'calvin_register_sidebars');
+
+include __DIR__ . '/inc/widgets/newsletter-widget.php';
+
+function calvin_register_widgets() {
+    
+    register_widget(new Newsletter_Widget);
+}
+add_action('widgets_init', 'calvin_register_widgets');
