@@ -7,7 +7,7 @@ class Newsletter_Widget extends WP_Widget
     {
         parent::__construct(
             'calvin-newsletter-widget',
-            'Calvin: Newsletter Widget'
+            __('Calvin: Newsletter Widget', 'calvin')
         );
     }
 
@@ -15,31 +15,34 @@ class Newsletter_Widget extends WP_Widget
     {
         
         printf('<p>
-            <label for="%s">Title</label>
+            <label for="%s">%s</label>
             <input type="text" name="%s" id="%s" value="%s" class="widefat">
         </p>', 
             $this->get_field_id('title'),
+            esc_html__('Title', 'calvin'),
             $this->get_field_name('title'),
             $this->get_field_id('title'),
-            $instance['title'] ?? ''
+            esc_attr($instance['title'] ?? '')
         );
 
         printf('<p>
-            <label for="%1$s">Description</label>
+            <label for="%1$s">%4$s</label>
             <input type="text" name="%2$s" id="%1$s" value="%3$s" class="widefat">
         </p>', 
             $this->get_field_id('desc'),
             $this->get_field_name('desc'),
-            $instance['desc'] ?? ''
+            esc_attr($instance['desc'] ?? ''),
+            esc_html__('Description', 'calvin')
         );
 
         printf('<p>
-            <label for="%1$s">Button BG Color</label>
+            <label for="%1$s">%4$s</label>
             <input type="color" name="%2$s" id="%1$s" value="%3$s" class="widefat">
         </p>', 
             $this->get_field_id('btn_bg_color'),
             $this->get_field_name('btn_bg_color'),
-            $instance['btn_bg_color'] ?? ''
+            esc_attr($instance['btn_bg_color'] ?? ''),
+            esc_html__('Button BG Color', 'calvin')
         );
 
     }

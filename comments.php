@@ -4,8 +4,15 @@
 
     <div id="comments" class="row">
         <div class="column large-12">
+            <h3><?php
+                printf( _n(
+                    '%d Comment',
+                    '%d Comments',
+                    get_comments_number(),
+                    'calvin'
+                ), get_comments_number() );
 
-            <h3><?= get_comments_number() ?> Comments</h3>
+            ?></h3>
 
             <?php // wp_list_comments() ?>
 
@@ -85,10 +92,8 @@
         ]);
     endif;
     ?>
-
+    <!--
     <div class="row comment-respond">
-
-        <!-- START respond -->
         <div id="respond" class="column">
 
             <h3>
@@ -119,11 +124,10 @@
                     <input name="submit" id="submit" class="btn btn--primary btn-wide btn--large h-full-width" value="Add Comment" type="submit">
 
                 </fieldset>
-            </form> <!-- end form -->
+            </form>
 
         </div>
-        <!-- END respond-->
-
+        -->
     </div> <!-- end comment-respond -->
 
 </div> <!-- end comments-wrap -->

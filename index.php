@@ -53,7 +53,7 @@ $slider_loop = new WP_Query([
         </div> <!-- end s-hero__slider -->
 
         <div class="s-hero__social hide-on-mobile-small">
-            <p>Follow</p>
+            <p><?php _e('Follow', 'calvin') ?></p>
             <span></span>
             <?php
                 wp_nav_menu([
@@ -83,7 +83,7 @@ $slider_loop = new WP_Query([
     <!-- content
     ================================================== -->
     <section class="s-content s-content--no-top-padding">
-
+        <a name="content"></a>
 
         <!-- masonry
         ================================================== -->

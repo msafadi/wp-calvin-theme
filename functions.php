@@ -4,6 +4,9 @@
 
 function calvin_theme_setup() {
 
+    load_theme_textdomain( 'calvin', get_template_directory() . '/languages' );
+    // load_theme_textdomain( 'calvin-admin', get_template_directory() . '/languages' );
+
     // RSS feeds links
     add_theme_support('automatic-feed-links');
 
@@ -47,8 +50,8 @@ function calvin_theme_setup() {
     // Set size "post-thumbnail"
     set_post_thumbnail_size(375, 250);
 
-    register_nav_menu('main-menu', 'Top Main Menu');
-    register_nav_menu('social-menu', 'Side Social Menu');
+    register_nav_menu('main-menu', __('Top Main Menu', 'calvin') );
+    register_nav_menu('social-menu', __('Side Social Menu', 'calvin') );
 
 }
 add_action('after_setup_theme', 'calvin_theme_setup');
@@ -132,8 +135,8 @@ function calvin_register_sidebars() {
 
     register_sidebar([
         'id' => 'calvin-footer-1',
-        'name' => 'Footer 1',
-        'description' => 'Footer col 1',
+        'name' => __('Footer 1', 'calvin'),
+        'description' => __('Footer col 1', 'calvin'),
         'before_widget' => '<div class="calvin-widget %2$s" id="%1$s">',
         'after_widget' => '</div>',
         'before_title' => '<h5 class="widget-title">',
@@ -141,8 +144,8 @@ function calvin_register_sidebars() {
     ]);
     register_sidebar([
         'id' => 'calvin-footer-2',
-        'name' => 'Footer 2',
-        'description' => 'Footer col 2',
+        'name' => __('Footer 2', 'calvin'),
+        'description' => __('Footer col 2', 'calvin'),
         'before_widget' => '',
         'after_widget' => '',
         'before_title' => '<h5 class="widget-title">',
@@ -151,8 +154,8 @@ function calvin_register_sidebars() {
 
     register_sidebar([
         'id' => 'calvin-footer-3',
-        'name' => 'Footer 3',
-        'description' => 'Footer col 3',
+        'name' => __('Footer 3', 'calvin'),
+        'description' => __('Footer col 3', 'calvin'),
         'before_widget' => '<div class="calvin-widget %2$s" id="%1$s">',
         'after_widget' => '</div>',
         'before_title' => '<h5 class="widget-title">',
@@ -160,8 +163,8 @@ function calvin_register_sidebars() {
     ]);
     register_sidebar([
         'id' => 'calvin-footer-4',
-        'name' => 'Footer 4',
-        'description' => 'Footer col 4',
+        'name' => __('Footer 4', 'calvin'),
+        'description' => __('Footer col 4', 'calvin'),
         'before_widget' => '',
         'after_widget' => '',
         'before_title' => '<h5 class="widget-title">',

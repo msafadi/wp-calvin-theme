@@ -51,7 +51,7 @@
 
         </div> <!-- end s-header__navigation -->
 
-        <a class="s-header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+        <a class="s-header__toggle-menu" href="#0" title="Menu"><span><?php esc_html_e('Menu', 'calvin') ?></span></a>
 
         <div class="s-header__search">
 
@@ -60,13 +60,13 @@
 
                     <form role="search" method="get" class="s-header__search-form" action="#">
                         <label>
-                            <span class="h-screen-reader-text">Search for:</span>
-                            <input type="search" class="s-header__search-field" placeholder="Search for..." value="" name="s" title="Search for:" autocomplete="off">
+                            <span class="h-screen-reader-text"><?php echo __('Search for:', 'calvin') ?></span>
+                            <input type="search" class="s-header__search-field" placeholder="<?php esc_attr_e('Search for...', 'calvin') ?>" value="" name="s" title="<?php esc_attr_e('Search for:', 'calvin') ?>" autocomplete="off">
                         </label>
-                        <input type="submit" class="s-header__search-submit" value="Search"> 
+                        <input type="submit" class="s-header__search-submit" value="<?php esc_attr_e('Search', 'calvin') ?>"> 
                     </form>
 
-                    <a href="#0" title="Close Search" class="s-header__overlay-close">Close</a>
+                    <a href="#0" title="<?php esc_attr_e('Close Search', 'calvin') ?>" class="s-header__overlay-close"><?php esc_html_e('Close', 'calvin') ?></a>
 
                 </div> <!-- end row -->
             </div> <!-- s-header__search-inner -->

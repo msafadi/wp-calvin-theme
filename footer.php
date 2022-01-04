@@ -82,9 +82,12 @@
             <div class="row">
                 <div class="column">
                     <div class="ss-copyright">
-                        <span>© Copyright Calvin 2020</span> 
-                        <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                        <span><?php printf( __('© Copyright %s %s', 'calvin'), bloginfo('name'), date('Y') ) ?></span> 
+                        <span><?php _e('Design by', 'calvin') ?> <a href="https://www.styleshout.com/">StyleShout</a></span>
                     </div> <!-- end ss-copyright -->
+                    <div>
+                        <?php _ex('Close', 'Close button', 'calvin') ?> | <?php echo _x('Close', 'Near', 'calvin') ?>
+                    </div>
                 </div>
             </div> 
 

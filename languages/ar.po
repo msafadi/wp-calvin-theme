@@ -1,0 +1,161 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Calvin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-04 14:40+0000\n"
+"PO-Revision-Date: 2022-01-04 16:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100 >= 3 "
+"&& n%100<=10 ? 3 : n%100 >= 11 && n%100<=99 ? 4 : 5;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.5; wp-5.8.2\n"
+"X-Domain: calvin"
+
+#: comments.php:8
+#, php-format
+msgid "%d Comment"
+msgid_plural "%d Comments"
+msgstr[0] "لا يوجد تعليقات"
+msgstr[1] "تعليق واحد"
+msgstr[2] "تعليقان"
+msgstr[3] "%d تعليقات"
+msgstr[4] "%d تعليقات"
+msgstr[5] "%d تعليقات"
+
+#: inc/widgets/newsletter-widget.php:45
+msgid "Button BG Color"
+msgstr ""
+
+#. Name of the theme
+msgid "Calvin"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Calvin is a free WordPress blog template that would surely create a strong "
+"and lasting first impression on all your visitors."
+msgstr ""
+
+#: inc/widgets/newsletter-widget.php:10
+msgid "Calvin: Newsletter Widget"
+msgstr "كالفن: القائمة البريدية"
+
+#: header.php:69
+msgid "Close"
+msgstr "إغلاق"
+
+#: footer.php:89
+msgctxt "Close button"
+msgid "Close"
+msgstr "إغلاق"
+
+#: header.php:69
+msgid "Close Search"
+msgstr "إغلاق البحث"
+
+#: inc/widgets/newsletter-widget.php:35
+msgid "Description"
+msgstr "الوصف"
+
+#: footer.php:86
+msgid "Design by"
+msgstr "صمم بواسطة"
+
+#: index.php:56
+msgid "Follow"
+msgstr "تابعنا"
+
+#: functions.php:137
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:146
+msgid "Footer 2"
+msgstr ""
+
+#: functions.php:156
+msgid "Footer 3"
+msgstr ""
+
+#: functions.php:165
+msgid "Footer 4"
+msgstr ""
+
+#: functions.php:138
+msgid "Footer col 1"
+msgstr ""
+
+#: functions.php:147
+msgid "Footer col 2"
+msgstr ""
+
+#: functions.php:157
+msgid "Footer col 3"
+msgstr ""
+
+#: functions.php:166
+msgid "Footer col 4"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://www.styleshout.com/"
+msgstr ""
+
+#. URI of the theme
+msgid "https://www.styleshout.com/free-templates/calvin/"
+msgstr ""
+
+#: header.php:54
+msgid "Menu"
+msgstr "القائمة"
+
+#. Author of the theme
+msgid "Mohammed Safadi - Styleshout"
+msgstr ""
+
+#: footer.php:89
+msgctxt "Near"
+msgid "Close"
+msgstr "قريب"
+
+#: 404.php:12
+msgid "Page Not Found"
+msgstr "الصفحة غير موجودة"
+
+#: header.php:66
+msgid "Search"
+msgstr "بحث"
+
+#: header.php:64
+msgid "Search for..."
+msgstr "ابحث عن..."
+
+#: header.php:63 header.php:64
+msgid "Search for:"
+msgstr "ابحث عن:"
+
+#: functions.php:53
+msgid "Side Social Menu"
+msgstr "قائمة السوشيال الجانبية"
+
+#: 404.php:18
+msgid "Sorry, the page you are looking for is not exists."
+msgstr "نأسف، الصفحة التي تحاول الوصول إليها غير موجودة."
+
+#: inc/widgets/newsletter-widget.php:22
+msgid "Title"
+msgstr "العنوان"
+
+#: functions.php:52
+msgid "Top Main Menu"
+msgstr "القائمة الرئيسية العلوية"
+
+#: footer.php:85
+#, php-format
+msgid "© Copyright %s %s"
+msgstr "© حقوق النشر %s %s"
