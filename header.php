@@ -20,7 +20,7 @@
 
 </head>
 
-<body id="top" <?php body_class('calvin-main') ?>>
+<body id="top" <?php body_class('calvin-main ' . get_theme_mod('page_layout')) ?>>
 
     <!-- preloader
     ================================================== -->

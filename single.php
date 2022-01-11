@@ -23,7 +23,9 @@ get_header();
                 </div> <!-- end s-content__media -->
 
                 <div class="s-content__entry-header">
-                    <h1 class="s-content__title s-content__title--post"><?php the_title() ?></h1>
+                    <?php do_action('calvin_before_title') ?>
+                        <?php the_title() ?>
+                    <?php do_action('calvin_after_title', get_post_format(), get_post_type()) ?>
                 </div> <!-- end s-content__entry-header -->
 
                 <div class="s-content__primary">

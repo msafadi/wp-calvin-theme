@@ -5252,3 +5252,18 @@ body.search-is-visible {
         padding-top: var(--vspace-1);
     }
 }
+
+.boxed {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.full-width {
+    width: 100%;
+    margin: 0 10%;
+}
+
+.stretched {
+    width: 100%;
+    margin: 0;
+}

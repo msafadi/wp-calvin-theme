@@ -170,6 +170,16 @@ function calvin_register_sidebars() {
         'before_title' => '<h5 class="widget-title">',
         'after_title' => '</h5>',
     ]);
+
+    register_sidebar([
+        'id' => 'calvin-right-sidebar',
+        'name' => __('Right Sidebar', 'calvin'),
+        'description' => __('Right Sidebar', 'calvin'),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h5 class="widget-title">',
+        'after_title' => '</h5>',
+    ]);
 }
 add_action('widgets_init', 'calvin_register_sidebars');
 
@@ -180,3 +190,65 @@ function calvin_register_widgets() {
     register_widget(new Newsletter_Widget);
 }
 add_action('widgets_init', 'calvin_register_widgets');
+
+
+// WordPress Hooks
+// 1. Actions: Events and Listeners
+//  add_action(), remove_action(), do_action()
+function calvin_before_title() {
+    echo '<h2 class="s-content__title s-content__title--post">';
+}
+add_action('calvin_before_title', 'calvin_before_title');
+
+function calvin_after_title() {
+    echo '</h2>';
+}
+add_action('calvin_after_title', 'calvin_after_title');
+
+function calvin_add_post_format_after_title($format, $type) {
+    echo '<span style="color:#fff;background:#000;display:inline-block;padding:5px">' . $type . '</span>';
+}
+add_action('calvin_after_title', 'calvin_add_post_format_after_title', 5, 2);
+
+remove_action('calvin_after_title', 'calvin_add_post_format_after_title', 5);
+
+function calvin_custom_style() {
+    echo '<style>body{background:#000 !important}</style>';
+}
+// add_action('wp_head', 'calvin_custom_style');
+
+remove_action('wp_head', 'wp_generator');
+
+// 2. Filters: Modification on content
+//  add_filter(), remove_filter(), apply_filters()
+function calvin_capitlize_title($title, $id) {
+    if (get_post_type($id) == 'post') {
+        return strtoupper($title);
+    }
+    return $title;
+}
+add_filter('the_title', 'calvin_capitlize_title', 10, 2);
+
+//remove_filter('the_title', 'calvin_capitlize_title');
+
+function calvin_add_read_more($excerpt) {
+    return $excerpt . '<a href="">Read more</a>';
+}
+add_filter('the_excerpt', 'calvin_add_read_more');
+
+function calvin_add_dots($excerpt) {
+    return $excerpt . '...';
+}
+add_filter('the_excerpt', 'calvin_add_dots', 5);
+
+function calvin_excerpt_length() {
+    return 10;
+}
+add_filter('excerpt_length', 'calvin_excerpt_length');
+
+function calvin_designedby($value) {
+    return 'Powered By';
+}
+add_filter('calvin_designedby', 'calvin_designedby');
+
+require_once __DIR__ . '/inc/theme-customize.php';

@@ -3,10 +3,15 @@
     <footer class="s-footer">
 
         <div class="s-footer__main">
+            <div class="row">
+                <div class="column large-12" id="footer-image">
+                    <img src="<?php echo wp_get_attachment_url(get_theme_mod('footer_image')) ?>" style="height:250px">
+                </div>
+            </div>
 
             <div class="row">
 
-                <div class="column large-3 medium-6 tab-12 s-footer__info">
+                <div class="column large-3 medium-6 tab-12 s-footer__info" style="color: <?php echo get_theme_mod('footer_color') ?>">
 
                     <?php
                         if (is_active_sidebar('calvin-footer-1')) :
@@ -82,8 +87,9 @@
             <div class="row">
                 <div class="column">
                     <div class="ss-copyright">
-                        <span><?php printf( __('© Copyright %s %s', 'calvin'), bloginfo('name'), date('Y') ) ?></span> 
-                        <span><?php _e('Design by', 'calvin') ?> <a href="https://www.styleshout.com/">StyleShout</a></span>
+                        <span><?php //printf( __('© Copyright %s %s', 'calvin'), bloginfo('name'), date('Y') ) ?></span> 
+                        <span class="ss-copyright-text"><?php echo get_theme_mod('copyright_text') ?></span>
+                        <span><?php echo apply_filters('calvin_designedby', __('Design by', 'calvin')) ?> <a href="https://www.styleshout.com/">StyleShout</a></span>
                     </div> <!-- end ss-copyright -->
                     <div>
                         <?php _ex('Close', 'Close button', 'calvin') ?> | <?php echo _x('Close', 'Near', 'calvin') ?>
@@ -91,11 +97,13 @@
                 </div>
             </div> 
 
+            <?php if (get_theme_mod('show_back_to_top') == 1) : ?>
             <div class="ss-go-top">
                 <a class="smoothscroll" title="Back to Top" href="#top">
                     <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M7.5 1.5l.354-.354L7.5.793l-.354.353.354.354zm-.354.354l4 4 .708-.708-4-4-.708.708zm0-.708l-4 4 .708.708 4-4-.708-.708zM7 1.5V14h1V1.5H7z" fill="currentColor"></path></svg>
                 </a>
             </div> <!-- end ss-go-top -->
+            <?php endif ?>
         </div> <!-- end s-footer__bottom -->
 
    </footer> <!-- end s-footer -->

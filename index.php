@@ -2,8 +2,9 @@
 get_header();
 
 $slider_loop = new WP_Query([
-    'posts_per_page' => 3,
-    'post__in' => get_option('sticky_posts'),
+    'posts_per_page' => get_theme_mod('slider_posts_count', 3),
+    'cat' => get_theme_mod('slider_posts_category')
+    //'post__in' => get_option('sticky_posts'),
 ]);
 
 ?>
